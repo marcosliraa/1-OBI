@@ -14,7 +14,7 @@ int main(void)
 
 int processo(void)
 {
-  int r, i, *x0, *xf, *y0, *yf;
+  int r, i, a, *x0, *xf, *y0, *yf;
   printf("Digite o numero de redes: \n");
   scanf("%d", &r);  
   
@@ -48,5 +48,11 @@ int processo(void)
     i++;
   }
    
+   if(r == 1)
+   {
+     a = (xf-x0) * (yf-y0);
+     return a;
+   }
+   }
 
   }
