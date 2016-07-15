@@ -14,11 +14,11 @@ int main(void)
 
 int processo(void)
 {
-  int r, i, a, *x0, *xf, *y0, *yf;
+  int r, i, j, xr, yr, Au, *a, *x0, *xf, *y0, *yf;
   printf("Digite o numero de redes: \n");
-  scanf("%d", &r);  
+  scanf("%d", &r);                          //recebe o numero de redes que foram jogadas ao mar
   
-  if(r<1 || r>100)
+  if(r<1 || r>100)                         //avalia se o resultado esta compativel com as restrições  
   {
     printf("Error, try again.\n");
     return EXIT_FAILURE;
@@ -26,9 +26,9 @@ int processo(void)
  
   x0=calloc(r,sizeof(int));
   xf=calloc(r,sizeof(int));
-  y0=calloc(r,sizeof(int));
+  y0=calloc(r,sizeof(int));              //aloca memórias
   yf=calloc(r,sizeof(int));
-  
+  a=calloc(r,sizeof(int));
   i=0;
   while(i<r)
   {
@@ -45,14 +45,54 @@ int processo(void)
         printf("Error, try again.\n");
         return EXIT_FAILURE;
     }
+    a[i] = (xf[i]-x0[i]) * (yf[i]-y0[i]);       //área que respresentará cada rede
     i++;
   }
    
-   if(r == 1)
-   {
-     a = (xf-x0) * (yf-y0);
-     return a;
-   }
-   }
+  if(r == 1)                     //se possui apenas 1 rede a resposta será a área daquela rede
+ {
+   a[0] = (xf[0]-x0[0]) * (yf[0]-y0[0]);
+   return a[0];
+ }
+   
+  i=0;
+  Au=0;
+  while(i<r)
+  {
+    Au = Au + a[i];          //area total ocupada por todas as redes sem estar calculada as interseções
+    i++;
+  }
+  i=j=0;
+  for(i=0;i<r;i++)
+  {
+    for(j=0;j<r;j++)
+    {
+      if(x0[i]<x0[j]<xf[i])
+      {
+        if((x0[j] - x0[i]) < (xf[i] - x0[j]))
+        xr = ();
+      }
+      else{
+        xr=();
+      }
+    }
+  }
+  
+  for(i=0;i<r;i++)
+  {
+    for(j=0;j<r;j++)
+    {
+      if(y0[i]<y0[j]<yf[i])
+      {
+        if((y0[j] - y0[i]) < (yf[i] - y0[j]))
+        yr = ();
+      }
+      else{
+        yr=();
+      }
+    }
+  }
+   
+   
 
   }
