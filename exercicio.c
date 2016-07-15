@@ -78,6 +78,20 @@ int processo(void)
     }
   }
   
+  for(i=0;i<r;i++)
+  {
+    for(j=0;j<r;j++)
+    {
+      if(y0[i]<y0[j]<yf[i])
+      {
+        if((y0[j] - y0[i]) < (yf[i] - y0[j]))
+        yr = ();
+      }
+      else{
+        yr=();
+      }
+    }
+  }
    
    
 
