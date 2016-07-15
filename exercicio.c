@@ -14,7 +14,7 @@ int main(void)
 
 int processo(void)
 {
-  int r, i, Au, *a, *x0, *xf, *y0, *yf;
+  int r, i, j, xr, yr, Au, *a, *x0, *xf, *y0, *yf;
   printf("Digite o numero de redes: \n");
   scanf("%d", &r);                          //recebe o numero de redes que foram jogadas ao mar
   
@@ -62,6 +62,23 @@ int processo(void)
     Au = Au + a[i];          //area total ocupada por todas as redes sem estar calculada as interseções
     i++;
   }
+  i=j=0;
+  for(i=0;i<r;i++)
+  {
+    for(j=0;j<r;j++)
+    {
+      if(x0[i]<x0[j]<xf[i])
+      {
+        if((x0[j] - x0[i]) < (xf[i] - x0[j]))
+        xr = ();
+      }
+      else{
+        xr=();
+      }
+    }
+  }
+  
+   
    
 
   }
