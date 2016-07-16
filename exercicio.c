@@ -73,7 +73,7 @@ int processo(void)
         xr = ();
       }
       else{
-        xr=();
+        xr=(xf[i] - x0[j]);
       }
     }
   }
@@ -85,7 +85,7 @@ int processo(void)
       if(y0[i]<y0[j]<yf[i])
       {
         if((y0[j] - y0[i]) < (yf[i] - y0[j]))
-        yr = ();
+        yr = (yf[i] - y0[j]);
       }
       else{
         yr=();
@@ -93,6 +93,8 @@ int processo(void)
     }
   }
    
+   Au= Au - (xr * yr);
    
-
-  }
+  
+  
+}
