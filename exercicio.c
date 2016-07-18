@@ -40,9 +40,9 @@ int processo(void)
     scanf("%d",&y0[i]);
     printf("Digite o valo de yf da rede %d\n",i+1);
     scanf("%i",&yf[i]);
-    if((x0<1 || x0>100) || (xf<1 || xf>100) || (y0<1 || y0>100) || (yf<1 || yf>100))
+    if((x0<1 || x0>100) || (xf<1 || xf>100) || (y0<1 || y0>100) || (yf<1 || yf>100))    //restrições do problema
     {
-        printf("Error, try again.\n");
+        printf("Error, try again.\n");                               //se estiver fora das restrições imprime a mensagem
         return EXIT_FAILURE;
     }
     a[i] = (xf[i]-x0[i]) * (yf[i]-y0[i]);       //área que respresentará cada rede
@@ -70,10 +70,10 @@ int processo(void)
       if(x0[i]<x0[j]<xf[i])
       {
         if((x0[j] - x0[i]) < (xf[i] - x0[j]))
-        xr = ();
+        xr = (xf[i] - x0[j]);                      //tamanho resultante de X se a condição acontecer
       }
       else{
-        xr=(xf[i] - x0[j]);
+        xr=();
       }
     }
   }
@@ -85,7 +85,7 @@ int processo(void)
       if(y0[i]<y0[j]<yf[i])
       {
         if((y0[j] - y0[i]) < (yf[i] - y0[j]))
-        yr = (yf[i] - y0[j]);
+        yr = (yf[i] - y0[j]);                          //tamanho resultante de Y se a condição acontecer
       }
       else{
         yr=();
@@ -93,8 +93,9 @@ int processo(void)
     }
   }
    
-   Au= Au - (xr * yr);
+   Au= Au - (xr * yr);                        //Área total utilizada
    
-  
+   return Au;
+   
   
 }
