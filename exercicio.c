@@ -69,11 +69,11 @@ int processo(void)
     {
       if(x0[i]<x0[j]<xf[i])
       {
-        if((x0[j] - x0[i]) < (xf[i] - x0[j]))
-        xr = (xf[i] - x0[j]);                      //tamanho resultante de X se a condição acontecer
+        xr= (xf[i] - xo[j]);
       }
-      else{
-        xr=();
+      if(x0[i]<xf[j]<xf[i])
+      {
+        xr=(xf[j] - x0[i]);
       }
     }
   }
@@ -84,11 +84,11 @@ int processo(void)
     {
       if(y0[i]<y0[j]<yf[i])
       {
-        if((y0[j] - y0[i]) < (yf[i] - y0[j]))
-        yr = (yf[i] - y0[j]);                          //tamanho resultante de Y se a condição acontecer
+        yr= (yf[i] - y0[j])
       }
-      else{
-        yr=();
+      if(y0[i]<yf[j]<yf[i])
+      {
+        yr=(yf[j] - y0[i]);
       }
     }
   }
