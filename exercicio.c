@@ -40,7 +40,7 @@ int processo(void)
     scanf("%d",&y0[i]);
     printf("Digite o valo de yf da rede %d\n",i+1);
     scanf("%i",&yf[i]);
-    if((x0<1 || x0>100) || (xf<1 || xf>100) || (y0<1 || y0>100) || (yf<1 || yf>100))    //restrições do problema
+    if((x0[i]<1 || x0[i]>100) || (xf[i]<1 || xf[i]>100) || (y0[i]<1 || y0[i]>100) || (yf[i]<1 || yf[i]>100))    //restrições do problema
     {
         printf("Error, try again.\n");                               //se estiver fora das restrições imprime a mensagem
         return EXIT_FAILURE;
@@ -69,7 +69,7 @@ int processo(void)
     {
       if(x0[i]<x0[j]<xf[i])
       {
-        xr= (xf[i] - xo[j]);
+        xr= (xf[i] - x0[j]);
       }
       if(x0[i]<xf[j]<xf[i])
       {
@@ -84,7 +84,7 @@ int processo(void)
     {
       if(y0[i]<y0[j]<yf[i])
       {
-        yr= (yf[i] - y0[j])
+        yr= (yf[i] - y0[j]);
       }
       if(y0[i]<yf[j]<yf[i])
       {
