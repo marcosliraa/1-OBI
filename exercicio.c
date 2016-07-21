@@ -67,24 +67,6 @@ int processo(void)
   {
     for(j=0;j<r;j++)
     {
-      if((x0[i]<x0[j]<xf[i] && x0[i]<xf[j]<xf[i]))
-      {
-          if(y0[i]<y0[j]<yf[i] && y0[i]<yf[j]<yf[i])
-            Au = Au;
-          if(y0[j]<y0[i] && y0[i]<yf[j]<yf[i])
-            Au = Au - (xf[j]-x0[j])*(y0[i]-y0[j]);
-          if(y0[i]<y0[j]<yf[i] && yf[j]>yf[i])
-            Au = Au - (xf[j]-x0[j])*(yf[j]-yf[i]);
-      }
-      if((y0[i]<y0[j]<yf[i] && y0[i]<yf[j]<yf[i]))
-      {
-          if(x0[i]<x0[j]<xf[i] && x0[i]<xf[j]<xf[i])
-            Au = Au;
-          if(x0[j]<x0[i] && x0[i]<xf[j]<xf[i])
-            Au = Au - (yf[j]-y0[j])*(x0[i]-x0[j]);
-          if(x0[i]<x0[j]<xf[i] && xf[j]>xf[i])
-            Au = Au - (yf[j]-y0[j])*(xf[j]-xf[i]);
-      }
       if(x0[i]<x0[j]<xf[i] && x0[i]<xf[i]<xf[j])
       {
         xr= (xf[i] - x0[j]);
@@ -116,15 +98,9 @@ int processo(void)
         }
       
       }
-      else
-      {
-         Au = Au;
-      }
     }
   }
-    
-  
+   
    return Au;
    
-  
 }
