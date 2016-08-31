@@ -1,7 +1,7 @@
 /*OBI 2011- Modalidade Programação Nível 2, Fase 1
  * Questão 1- O mar não esta para peixe
  * Autor: José Marcos de Lira Júnior
- * Engenharia de Controle 
+ * Estudante de Engenharia de Controle e Automação
  */
 
 
